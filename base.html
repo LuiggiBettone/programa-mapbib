@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Meu Site{% endblock %}</title>
+    <style>
+        .header {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f2f2f2;
+            float: left;
+            height: 100%;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='img/Horizontal_colorido.png') }}" alt="Top Image">
+    </div>
+    <div class="sidebar">
+        <a href="/">Home</a>
+        <a href="/graficos">Gráficos</a>
+        <a href="/matriz-curricular">Matriz Curricular</a>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

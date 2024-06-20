@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Matriz Curricular{% endblock %}
+
+{% block content %}
+    <div class="content" style="background-image: url('{{ url_for('static', filename='img/matriz.png') }}'); background-size: cover; background-position: center; height: 100vh; display: flex; justify-content: center; align-items: center;">
+        <h2 style="color: white; background-color: rgba(0, 0, 0, 0.5); padding: 10px; border-radius: 5px;">Matriz Curricular</h2>
+    </div>
+{% endblock %}
